@@ -2,21 +2,21 @@ package com.board.example.dto;
 
 import java.util.Date;
 
-public class BoardDTO {
+public class BoardDTO { // data 전달자 
+	
 	//Field
+	private int bno; // 게시물 번호
+	private String title;   // 제목
+	private String content; // 내용
+	private String writer;  // 작성자
+	private Date regdate;   // 작성일자
+	private String viewcnt; // 조회수
 	
-	private int bno;		//게시물번호		
-	private String title;		//게시물제목
-	private String content;	//게시물 내용
-	private String writer;		//게시물 작성자
-	private Date regdate;	//게시물 작성일자
-	private int viewcnt;	//게시물 조회수
+	//Constructor Super
+	public BoardDTO() {}
 	
-	
-	
-	//Constructor
-	public BoardDTO() {} //DTO 데이터베이스 연결자
-	public BoardDTO(int bno, String title, String content, String writer, Date regdate, int viewcnt) {
+	// alt + shift + s   >  generate Constructor using field
+	public BoardDTO(int bno, String title, String content, String writer, Date regdate, String viewcnt) {
 		super();
 		this.bno = bno;
 		this.title = title;
@@ -25,6 +25,8 @@ public class BoardDTO {
 		this.regdate = regdate;
 		this.viewcnt = viewcnt;
 	}
+	
+	
 	public int getBno() {
 		return bno;
 	}
@@ -55,13 +57,11 @@ public class BoardDTO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	public int getViewcnt() {
+	public String getViewcnt() {
 		return viewcnt;
 	}
-	public void setViewcnt(int viewcnt) {
+	public void setViewcnt(String viewcnt) {
 		this.viewcnt = viewcnt;
 	}
-	
-	
-	
+
 }
