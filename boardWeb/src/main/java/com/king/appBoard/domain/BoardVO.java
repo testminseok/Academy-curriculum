@@ -19,14 +19,14 @@ public class BoardVO {
 		@NotEmpty(message="작성자를 입력해주세요")
 		private String writer;
 		
-		private String password;
+		private int password;
 		private Timestamp regDate;
 		private int cnt;
 		
 		public BoardVO() {
 		}
 		
-		public BoardVO(String title, String content, String writer, String password) {
+		public BoardVO(String title, String content, String writer, int password) {
 			super();
 			
 			this.title = title;
@@ -60,10 +60,10 @@ public class BoardVO {
 		public void setWriter(String writer) {
 			this.writer = writer;
 		}
-		public String getPassword() {
+		public int getPassword() {
 			return password;
 		}
-		public void setPassword(String password) {
+		public void setPassword(int password) {
 			this.password = password;
 		}
 		public Timestamp getRegDate() {

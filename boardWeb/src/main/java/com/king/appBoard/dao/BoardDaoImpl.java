@@ -27,13 +27,26 @@ public class BoardDaoImpl implements BoardDao{
 		sqlSessionTemplate.insert("insert",boardVO);
 	}
 	
+//	@Override
+//	public BoardVO read(int seq) {
+//		return sqlSessionTemplate.selectOne("read",seq);
+//	}
+	
 	@Override
-	public BoardVO read(int seq) {
-		return sqlSessionTemplate.selectOne("read",seq);
+	public BoardVO select(int seq) {
+		BoardVO vo = sqlSessionTemplate.selectOne("select", seq);
+		return vo;
 	}
+	public int updateReadCount(int seq) {
+		return sqlSessionTemplate.update("updateCount",seq);
+	}
+//	@Override
+//	public void update(BoardVO boardVO) {
+//		sqlSessionTemplate.update("update",boardVO);
+//	}
 	@Override
-	public void update(BoardVO boardVO) {
-		sqlSessionTemplate.update("update",boardVO);
+	public int update(BoardVO boardVO) {
+		return sqlSessionTemplate.update("update",boardVO);
 	}
 	public void delete(int seq) {
 		sqlSessionTemplate.delete("delete",seq);

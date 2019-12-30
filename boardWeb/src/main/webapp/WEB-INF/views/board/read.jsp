@@ -42,7 +42,7 @@
 			<td>${boardVO.cnt }</td>
 		</tr>
 	</table>
-	<a href="<c:url value="/board/update/${boardVO.seq }"/>">수정</a>
+	<a href="<c:url value="/board/edit/${boardVO.seq }"/>">수정</a>
 	<a href="<c:url value="/board/delete/${boardVO.seq }"/>">삭제</a>
 
 

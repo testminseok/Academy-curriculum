@@ -10,9 +10,11 @@ public interface BoardDao {
 	public abstract void delete(int seq);
 //	public abstract int deleteAll();
 	public abstract void insert(BoardVO boardVO);
-//	public abstract BoardVO select(int seq);
-//	public abstract int updateReadCount(int seq);
-	public abstract BoardVO read(int seq);
-	public abstract void update(BoardVO boardVO); 
+	public abstract BoardVO select(int seq);
+	public abstract int updateReadCount(int seq);
+//	public abstract BoardVO read(int seq);
+//	public abstract void update(BoardVO boardVO);
+	public abstract int update(BoardVO boardVO);
+	
 
 }
